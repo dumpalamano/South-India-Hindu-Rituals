@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chirala Family Traditions & Rituals</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500;1,700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --vermillion:#b5341a; --saffron:#e87c1a; --temple:#7b2d8b;
+  --sea:#1a6b8a; --gold:#c9952a; --ivory:#fdf9f2;
+  --warm:#f5ece0; --card:#fffdf8; --border:#e2ceaa;
+  --ink:#1a0800; --muted:#6a4a2a;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--ivory);font-family:'Jost',sans-serif;color:var(--ink);}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse at 15% 25%,rgba(181,52,26,.06) 0%,transparent 50%),radial-gradient(ellipse at 85% 75%,rgba(123,45,139,.05) 0%,transparent 50%);pointer-events:none;z-index:0;}
+.top-bar{height:10px;background:linear-gradient(90deg,var(--vermillion) 0%,var(--saffron) 30%,var(--temple) 60%,var(--sea) 100%);}
+.container{max-width:980px;margin:0 auto;padding:52px 22px 80px;position:relative;z-index:1;}
+header{text-align:center;margin-bottom:44px;animation:fadeUp .7s ease both;}
+.comm-badge{display:inline-flex;gap:8px;align-items:center;background:rgba(181,52,26,.09);color:var(--vermillion);font-size:11px;font-weight:600;letter-spacing:.25em;text-transform:uppercase;padding:5px 18px;border-radius:100px;margin-bottom:14px;}
+.sub-telugu{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);font-size:18px;margin-bottom:12px;}
+.icons-row{font-size:24px;letter-spacing:.3em;margin:12px 0;}
+.float{display:inline-block;animation:float 3s ease-in-out infinite;}
+.float:nth-child(2){animation-delay:.4s}.float:nth-child(3){animation-delay:.8s}.float:nth-child(4){animation-delay:1.2s}.float:nth-child(5){animation-delay:.7s}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.5rem);line-height:1.12;margin-bottom:14px;}
+h1 em{font-style:italic;color:var(--vermillion);}
+.header-desc{font-size:14px;color:var(--muted);max-width:560px;margin:0 auto;line-height:1.8;}
+.identity-card{background:var(--card);border:1.5px solid var(--border);border-radius:16px;padding:22px 28px;margin-bottom:36px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;animation:fadeUp .7s .1s ease both;}
+@media(max-width:640px){.identity-card{grid-template-columns:1fr;}}
+.id-pillar{padding:16px;border-radius:12px;text-align:center;}
+.id-pillar-1{background:rgba(181,52,26,.07);border:1px solid rgba(181,52,26,.15);}
+.id-pillar-2{background:rgba(201,149,42,.07);border:1px solid rgba(201,149,42,.2);}
+.id-pillar-3{background:rgba(123,45,139,.07);border:1px solid rgba(123,45,139,.15);}
+.id-icon{font-size:24px;margin-bottom:6px;}
+.id-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;margin-bottom:4px;}
+.id-pillar-1 .id-label{color:var(--vermillion);}
+.id-pillar-2 .id-label{color:var(--gold);}
+.id-pillar-3 .id-label{color:var(--temple);}
+.id-value{font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--ink);font-weight:700;line-height:1.4;}
+.filters{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:32px;animation:fadeUp .7s .12s ease both;}
+.filter-btn{border:1.5px solid var(--border);background:var(--card);color:var(--muted);padding:8px 18px;border-radius:100px;font-family:'Jost',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;}
+.filter-btn:hover{border-color:var(--vermillion);color:var(--vermillion);}
+.filter-btn.active{background:var(--vermillion);border-color:var(--vermillion);color:#fff;}
+.progress-wrap{background:linear-gradient(135deg,#fff5ee,#fef0e0);border:1px solid var(--border);border-radius:14px;padding:20px 26px;margin-bottom:36px;display:flex;align-items:center;gap:20px;animation:fadeUp .7s .15s ease both;}
+.progress-icon{font-size:28px;}
+.progress-text{flex:1;}
+.progress-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:6px;}
+.progress-bar{height:7px;background:rgba(0,0,0,.07);border-radius:99px;overflow:hidden;}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--vermillion),var(--saffron),var(--temple));border-radius:99px;transition:width .5s ease;}
+.progress-count{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--vermillion);font-weight:700;white-space:nowrap;}
+.section-label{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--saffron);font-weight:600;margin:42px 0 18px;display:flex;align-items:center;gap:14px;animation:fadeUp .6s ease both;}
+.section-label .s-icon{font-size:18px;}
+.section-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--border),transparent);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(272px,1fr));gap:18px;}
+.card{background:var(--card);border-radius:14px;border:1.5px solid var(--border);padding:22px 20px 18px;cursor:pointer;transition:all .25s;position:relative;overflow:hidden;animation:fadeUp .5s ease both;}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--vermillion),var(--saffron));opacity:0;transition:opacity .2s;}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(181,52,26,.1);border-color:rgba(181,52,26,.3);}
+.card:hover::before{opacity:1;}
+.card.done{border-color:var(--sea);background:#f2f9ff;}
+.card.done::before{opacity:1;background:linear-gradient(90deg,var(--sea),#26a0c0);}
+.card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;}
+.card-icon{font-size:30px;}
+.check-circle{width:24px;height:24px;border-radius:50%;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;font-size:12px;transition:all .2s;}
+.card.done .check-circle{background:var(--sea);border-color:var(--sea);}
+.card-freq{display:inline-block;font-size:10px;letter-spacing:.15em;text-transform:uppercase;font-weight:600;color:var(--vermillion);margin-bottom:5px;}
+.card-title{font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.3;color:var(--ink);margin-bottom:5px;font-weight:700;}
+.card-telugu{font-size:12px;color:var(--gold);font-weight:500;margin-bottom:8px;font-style:italic;}
+.card-desc{font-size:13px;color:var(--muted);line-height:1.65;}
+.card-tag{display:inline-block;margin-top:12px;font-size:11px;padding:3px 10px;border-radius:100px;background:var(--warm);color:var(--muted);font-weight:600;}
+.card-special{display:inline-block;margin-top:6px;margin-left:4px;font-size:10px;padding:2px 8px;border-radius:100px;background:rgba(123,45,139,.1);color:var(--temple);font-weight:600;}
+.fest-section{background:linear-gradient(145deg,#0f0005,#200015,#0a1020);border-radius:18px;padding:34px 28px;margin-top:50px;color:#fff;position:relative;overflow:hidden;animation:fadeUp .6s ease both;}
+.fest-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(201,149,42,.2),transparent 50%),radial-gradient(ellipse at 20% 80%,rgba(181,52,26,.15),transparent 50%);pointer-events:none;}
+.fest-header{text-align:center;margin-bottom:28px;position:relative;}
+.fest-header h2{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-style:italic;color:var(--gold);margin-bottom:6px;}
+.fest-header p{font-size:11px;color:rgba(255,255,255,.4);letter-spacing:.25em;text-transform:uppercase;}
+.fest-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;position:relative;}
+.fest-card{background:rgba(255,255,255,.06);border:1px solid rgba(201,149,42,.2);border-radius:12px;padding:18px;transition:background .2s;}
+.fest-card:hover{background:rgba(255,255,255,.1);}
+.fest-icon{font-size:26px;margin-bottom:8px;}
+.fest-name{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--gold);font-weight:700;margin-bottom:3px;}
+.fest-telugu{font-size:11px;color:rgba(201,149,42,.55);font-style:italic;margin-bottom:8px;}
+.fest-desc{font-size:12px;color:rgba(255,255,255,.65);line-height:1.65;}
+.celebrate-banner{display:none;text-align:center;padding:26px;background:linear-gradient(135deg,var(--vermillion),var(--temple));color:#fff;border-radius:14px;margin-top:32px;font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;animation:fadeUp .5s ease;}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes confettiDrop{0%{transform:translateY(-10px) rotate(0deg);opacity:1}100%{transform:translateY(100vh) rotate(720deg);opacity:0}}
+.confetti-piece{position:fixed;width:8px;height:8px;border-radius:2px;animation:confettiDrop 2s ease forwards;pointer-events:none;z-index:999;}
+</style>
+</head>
+<body>
+<div class="top-bar"></div>
+<div class="container">
+  <header>
+    <div class="comm-badge">🏺 Chirala Traditions & Rituals · Coastal Andhra Pradesh</div>
+    <p class="sub-telugu">చిరాల కుటుంబ సంప్రదాయాలు — వాసవి మాత ఆశీస్సులతో</p>
+    <div class="icons-row">
+      <span class="float">🏺</span><span class="float">🪔</span><span class="float">🌊</span><span class="float">💐</span><span class="float">⚖️</span>
+    </div>
+    <h1>చిరాల <em>సంప్రదాయాలు</em><br>Chirala Family Traditions</h1>
+    <p class="header-desc">The proud traditions of a Hindu household from Chirala — rooted in Vasavi Matha's legacy of non-violence and righteousness, the 102 gotras, and coastal Andhra's sacred rhythms.</p>
+  </header>
+
+  <div class="identity-card">
+    <div class="id-pillar id-pillar-1">
+      <div class="id-icon">🙏</div>
+      <div class="id-label">Kula Devata</div>
+      <div class="id-value">Sri Vasavi Kanyaka Parameswari Devi — the community's eternal mother, who chose honour over compromise at Penugonda</div>
+    </div>
+    <div class="id-pillar id-pillar-2">
+      <div class="id-icon">🧬</div>
+      <div class="id-label">Gotra System</div>
+      <div class="id-value">102 sacred gotras of the Arya Vysya community — each connected to a Rishi lineage, governing marriage and ritual identity</div>
+    </div>
+    <div class="id-pillar id-pillar-3">
+      <div class="id-icon">⚖️</div>
+      <div class="id-label">Community Values</div>
+      <div class="id-value">Ahimsa · Satya · Dharma — strict vegetarianism, non-violence, honest trade, and Vasavi Puranam rituals</div>
+    </div>
+  </div>
+
+  <div class="filters">
+    <button class="filter-btn active" onclick="filter('all',event)">అన్నీ · All</button>
+    <button class="filter-btn" onclick="filter('daily',event)">Daily · రోజువారీ</button>
+    <button class="filter-btn" onclick="filter('weekly',event)">Weekly · వారంవారీ</button>
+    <button class="filter-btn" onclick="filter('vasavi',event)">🙏 Vasavi Matha</button>
+    <button class="filter-btn" onclick="filter('pooja',event)">Pooja · పూజ</button>
+    <button class="filter-btn" onclick="filter('kitchen',event)">Kitchen · వంట</button>
+    <button class="filter-btn" onclick="filter('business',event)">Business · వ్యాపారం</button>
+    <button class="filter-btn" onclick="filter('elders',event)">Elders · పెద్దలు</button>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress-icon">🏺</div>
+    <div class="progress-text">
+      <div class="progress-label">Traditions Adopted · అవలంబించిన సంప్రదాయాలు</div>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    </div>
+    <span class="progress-count" id="progressCount">0 / 21</span>
+  </div>
+  <div id="container"></div>
+  <div class="celebrate-banner" id="celebrateBanner">🏺 శ్రీ వాసవి మాత ఆశీర్వాదం! 🏺 — Vasavi Matha's blessings upon your family. May your gotram, dharma, and devotion be eternal lights for all generations!</div>
+</div>
+<script>
+const traditions = [
+  // DAILY
+  {id:1,freq:'daily',icon:'🙏',filters:['all','daily','vasavi','pooja'],title:'Vasavi Matha Morning Prayer',telugu:'వాసవి మాత ఉదయ ప్రార్థన',tag:'Kula Devata Ritual',special:true,desc:'Every Arya Vysya household begins the day with a prayer to Sri Vasavi Kanyaka Parameswari Devi — the community\'s eternal kula devata. A small framed photo or idol of Vasavi Matha is present in every pooja room. The morning prayer includes the Vasavi Ashtothram or at minimum a brief namaskaram. Children are taught from birth: before any action, bow to Vasavi Matha.'},
+  {id:2,freq:'daily',icon:'🪔',filters:['all','daily','pooja'],title:'Tulasi & Deepam — Dawn Ritual',telugu:'తులసి దీపారాధన',tag:'Daily Pooja',desc:'The lamp is lit before sunrise in the pooja room — brass deepa with gingelly oil. The Tulasi plant is watered and worshipped. Arya Vysya homes maintain a strict purity standard: the pooja room is entered only after bathing. Sandal paste (chandanam) and kumkum applied to all deities. Agarbathi of jasmine or rose fills the house. The ritual is identical morning and evening.'},
+  {id:3,freq:'daily',icon:'🥗',filters:['all','daily','kitchen'],title:'Pure Vegetarian Kitchen',telugu:'శుద్ధ శాకాహారం',tag:'Ahimsa Principle',desc:'Arya Vysyas are strict vegetarians — ahimsa is a foundational value. No onion or garlic in many orthodox households (sattvic cooking). The kitchen is treated as sacred: maintained in purity, swept before cooking. Chirala families have access to fresh coastal vegetables but never seafood. The Komati kitchen produces elaborate rice dishes, dals, chutneys, and snacks with jaggery, sesame, and groundnuts as signature flavours.'},
+  {id:4,freq:'daily',icon:'🙏',filters:['all','daily','elders'],title:'Guru Vandanam — Elders\' Reverence',telugu:'పెద్దలకు గురు వందనం',tag:'Family Honour',desc:'Morning namaskaaram to grandparents and parents is a non-negotiable daily ritual. In Arya Vysya families, the elder\'s blessing is considered equivalent to a deity\'s blessing — both parents are treated as living manifestations of Lakshmi and Vishnu. Children prostrate fully. Elders press their palm on the child\'s head and whisper "Dheerghayusha bhava, Vysya kula gauravam palimpu" (Live long, uphold your Vysya lineage\'s honour).'},
+  {id:5,freq:'daily',icon:'📿',filters:['all','daily','pooja','vasavi'],title:'Vasavi Suprabhatam & Stotras',telugu:'వాసవి సుప్రభాతం',tag:'Morning Devotion',desc:'After morning pooja, the Vasavi Suprabhatam is recited — the awakening hymn to Vasavi Matha. This is followed by Lakshmi Ashtothram (Fridays) or Venkateswara Suprabhatam. Some families recite the Vasavi Charitra slokas teaching children the story of Vasavi\'s sacrifice for community honour. These stotras are memorised across generations — even children abroad can recite them.'},
+  {id:6,freq:'daily',icon:'⚖️',filters:['all','daily','business','elders'],title:'Business Ethics Prayer',telugu:'వ్యాపార ధర్మం',tag:'Merchant Tradition',desc:'Before opening a shop or beginning business for the day, Arya Vysya merchants perform a brief pooja at the business premises — a small Lakshmi or Ganesha idol on the counter or in a dedicated corner. The prayer includes: "May this day\'s trade be honest, may what I give be full measure, may I never deceive a customer." This is not just ritual — it is the Komati dharma of honest commerce practiced for centuries.'},
+  {id:7,freq:'daily',icon:'🌿',filters:['all','daily','pooja'],title:'Evening Naivedyam & Aarti',telugu:'సాయంకాల నైవేద్యం',tag:'Evening Ritual',desc:'At sunset, the family pooja includes naivedyam of the evening\'s cooked food before anyone eats. The aarti with camphor is performed — the plate circled clockwise three times, bell rung. Lakshmi Ashtothram recited by the women. In Chirala coastal homes, the evening sea breeze comes through the windows as the agarbathi smoke curls upward — a uniquely evocative ritual atmosphere.'},
+  // WEEKLY
+  {id:8,freq:'weekly',icon:'🏺',filters:['all','weekly','vasavi','pooja'],title:'Friday Vasavi Matha Abhishekam',telugu:'శుక్రవారం వాసవి మాత అభిషేకం',tag:'Kula Devata Vrat',special:true,desc:'Friday is the most sacred day for Arya Vysyas. The Vasavi Matha idol or photo receives a special abhishekam — milk, turmeric water, rosewater. Fresh flowers (jasmine or lotus) offered. Women light 16 wicks and recite the 108 names of Vasavi Devi. A sweet prasadam (usually chakkara pongali or payasam) is prepared and shared with neighbours. The family\'s business ledgers are also placed before Vasavi Matha for blessing.'},
+  {id:9,freq:'weekly',icon:'💐',filters:['all','weekly','pooja','women'],title:'Friday Varalakshmi Vrat',telugu:'వరలక్ష్మి వ్రతం',tag:'Women\'s Tradition',desc:'Arya Vysya women observe Varalakshmi Vrat on Fridays — especially in Shravana month. A kalasha with mango leaves and coconut is installed. Goddess Lakshmi is identified with Vasavi Matha (both being Lakshmi\'s incarnations for the community). A neighbourhood woman is invited, given tamboolam (betel, fruits, coconut, bangles, blouse piece), and her feet washed — the Goddess honoured in human form.'},
+  {id:10,freq:'weekly',icon:'🔱',filters:['all','weekly','pooja'],title:'Ekadashi Upavasa',telugu:'ఏకాదశి ఉపవాసం',tag:'Vaishnava Vrat',desc:'Arya Vysyas, being deeply Vaishnava in spiritual orientation (Venkateshwara is also their family deity in the Trivarnika tradition), observe Ekadashi with strict fasting. Elders eat only fruits. Vishnu Sahasranama is recited. In some families, a full reading of Bhagavatam chapters related to that Ekadashi\'s story is performed. The fast is broken on Dwadashi morning with specific Ekadashi prasadam items.'},
+  {id:11,freq:'weekly',icon:'🛕',filters:['all','weekly','pooja'],title:'Weekly Vasavi Matha Temple Visit',telugu:'వాసవి దేవాలయ దర్శనం',tag:'Community Bond',desc:'Most Arya Vysya families in Chirala visit the local Vasavi Kanyaka Parameswari temple on Fridays or Sundays. The family dresses formally — women in silk sarees, men in dhotis for older generations. Offerings of coconut, flowers, and kumkum. After darshan, the prasadam (usually sweet pongal) is shared. Families meet other Komati families at the temple — community bonds maintained through shared worship.'},
+  {id:12,freq:'weekly',icon:'📚',filters:['all','weekly','vasavi','elders'],title:'Vasavi Puranam Story Hour',telugu:'వాసవి పురాణం',tag:'Cultural Heritage',special:true,desc:'The Vasavi Puranam — the sacred text of the Arya Vysya community — is the family\'s spiritual library. Grandparents narrate stories from the Vasavi Charitra: Vasavi\'s birth, her learning, her choice of honour over a king\'s proposal, and the Agnipravesham (self-immolation to protect community honour). Children must know the story of the 102 gotras and why Penugonda is the Kashi of Arya Vysyas.'},
+  {id:13,freq:'weekly',icon:'🌊',filters:['all','weekly','elders'],title:'Coastal Sea Walk & Gratitude',telugu:'సముద్రతీర నడక',tag:'Chirala Coastal Identity',desc:'Chirala sits on the Bay of Bengal coast. Arya Vysya families in Chirala maintain the tradition of an early morning or evening walk on the beach — often combined with a brief prayer to the sea (theertham). The sea is considered sacred. Grandfathers teach children which direction the wind is coming from, the names of fish (though vegetarians, they respect the fishing community\'s livelihood), and the history of Chirala\'s trade ports.'},
+  {id:14,freq:'weekly',icon:'🍛',filters:['all','weekly','kitchen'],title:'Sunday Vanta — Community Feast',telugu:'ఆదివారం వంట',tag:'Kitchen Tradition',desc:'Sunday is for elaborate Komati vegetarian cooking. Chirala\'s Arya Vysya women make: Pesarattu, Avial (influenced by coastal proximity), raw mango rice, coconut chutney, Guggillu (sprouted chickpea preparation for festivals), and Bobbatlu (sweet stuffed flatbread). Sesame laddu for the pooja. The meal is cooked in pure groundnut oil or ghee — no shortcuts. The kitchen fills with multiple generations working together.'},
+  {id:15,freq:'weekly',icon:'💼',filters:['all','weekly','business','elders'],title:'Accounts & Ledger Review',telugu:'లెక్కల సమీక్ష',tag:'Merchant Tradition',desc:'The Komati tradition of meticulous bookkeeping is legendary. Even in the modern era, Arya Vysya families maintain a physical accounts book (kadiyam/ledger) for household finances. On Sundays or end of week, the senior member reviews accounts — income, expenses, charity donations (dana), savings. Children observe and learn. The Komati principle: "Honest accounts are an offering to Lakshmi."'},
+  {id:16,freq:'weekly',icon:'🎵',filters:['all','weekly','elders','pooja'],title:'Annamacharya Kirtanas',telugu:'అన్నమాచార్య కీర్తనలు',tag:'Spiritual Music',desc:'Annamacharya\'s compositions for Venkateswara — the family deity for many Arya Vysya households — are sung weekly. Grandmothers teach children "Brochevarevarura," "Venkateshwara Suprabhatam," and seasonal compositions. Arya Vysyas also sing Purandaradasa compositions (shared South Indian Vaishnava heritage). The weekly song session keeps children connected to Telugu and Kannada devotional music simultaneously.'},
+  {id:17,freq:'daily',icon:'🌸',filters:['all','daily','women'],title:'Muggulu at the Shop & Home',telugu:'ముగ్గులు',tag:'Daily Beauty Ritual',desc:'Arya Vysya women draw muggulu at the home entrance and, traditionally, at the entrance of the family shop every morning. This signals that the space is blessed and auspicious. On Karthika Masam, the muggulu grow elaborate — flower petals, lamps at corners. The muggulu pattern a woman draws is often unique to her family — a geometric signature passed through generations.'},
+  {id:18,freq:'weekly',icon:'🌕',filters:['all','weekly','pooja'],title:'Pournami Satyanarayana Katha',telugu:'పౌర్ణమి సత్యనారాయణ కథ',tag:'Full Moon Ritual',desc:'On Pournami night, Satyanarayana Katha is performed — the most common home ritual among Arya Vysyas. A puja mandapam is decorated with banana stems, mango leaves, and flower garlands. The five chapters of the Katha are recited by the priest or a senior family member. All family members and invited guests sit to hear it. Mannapaayasam (semolina pudding with jaggery) is the prasadam — distributed to all.'},
+  {id:19,freq:'weekly',icon:'🤝',filters:['all','weekly','business','elders'],title:'Komati Community Sabha',telugu:'వైశ్య సభ',tag:'Community Governance',desc:'Arya Vysya families maintain strong community organisational bonds. The local Vysya Sangham or Komati community association meets regularly. Elders participate in community dispute resolution (following the ancient tradition of the Mahanad), charity initiatives (Dharmasala tradition), and weddings/upanayanam support. Children attend these gatherings — absorbing the community values of collective responsibility and fair dealing.'},
+  {id:20,freq:'daily',icon:'💛',filters:['all','daily','kitchen'],title:'Jaggery — Sacred Sweetness',telugu:'బెల్లం',tag:'Komati Kitchen Signature',desc:'Every Arya Vysya kitchen uses jaggery (bellam) as a primary sweetener — sugar is considered tamasic in orthodox tradition. Prasadam is always jaggery-based. The day begins with a small piece of jaggery after morning prayer. Guggillu, Bobbatlu, Kobbari mithai (coconut sweet), and Ariselu are all jaggery-based. When a business deal is closed or a child succeeds, jaggery is distributed — the Komati sweet of celebration.'},
+  {id:21,freq:'weekly',icon:'📿',filters:['all','weekly','vasavi','pooja'],title:'Gotra Recitation & Lineage Teaching',telugu:'గోత్ర పరిచయం',tag:'Identity Ritual',special:true,desc:'Arya Vysyas identify themselves through their gotra — the Rishi lineage that survived Vasavi Matha\'s Agnipravesham. Grandparents teach grandchildren to recite their full gotra pravara: "Aham ... gotra pravaranthargatha ... shaakhadhyayi..." Children learn which other gotras they cannot marry (exogamy rules) and which deities are specific to their gotra\'s Moolastana. This is living genealogy — a 1000-year lineage carried in a child\'s memory.'},
+];
+const festivals = [
+  {icon:'🙏',name:'Vasavi Jayanti & Atmarpana Dinotsavam',telugu:'వాసవి జయంతి',desc:'The most sacred Arya Vysya festival — celebrating Sri Vasavi Kanyaka Parameswari Devi\'s birth (Vasavi Jayanti, Vaishakha Shuddha Dashami) and her Atmarpana (self-sacrifice, Phalguna month). All Komati families perform special abhishekam and recite the Vasavi Charitra. The local Vasavi temple holds grand celebrations for 3–7 days. Families who cannot visit Penugonda (the Kashi of Vysyas) create a replica puja at home with all rituals.'},
+  {icon:'🌾',name:'Sankranti',telugu:'సంక్రాంతి',desc:'The Komati Sankranti is both a harvest festival and a business occasion — the traditional time for settling accounts, distributing Dasara bonus to employees, and visiting the temple for a fresh-year blessing. Chirala\'s coastal Sankranti adds special elements: fresh sugarcane from nearby farms, local Pongal varieties, and the Bhogi Mantalu bonfire on the beach or in the courtyard. Ariselu and Guggillu made in bulk and shared with neighbours and staff.'},
+  {icon:'📿',name:'Upanayanam — Sacred Thread',telugu:'ఉపనయనం',desc:'The most important life ritual for Arya Vysya boys — the sacred thread ceremony (Upanayanam/Munja). The community fought for centuries for the right to perform this Vaishya rite. Today it is celebrated grandly: a three-day event with full Vedic rituals, community feast, and the boy receiving his gotra-specific mantra initiation. All 102 gotra members of the family are invited. The thread (yagnopavita) is worn for life.'},
+  {icon:'💐',name:'Varalakshmi Vrat & Diwali',telugu:'వరలక్ష్మి వ్రతం, దీపావళి',desc:'Two major festivals of wealth and light. Varalakshmi Vrat (Shravana month): women invite a married woman representing Goddess Lakshmi, wash her feet, offer elaborate tamboolam, and fast for family prosperity. Diwali: Dhanalakshmi Pooja is the centrepiece — business accounts, gold, and the family safe are placed before Lakshmi. New accounts book opened after being blessed. Ariselu and Chirala\'s famous Karachkaaya (fried sweet) distributed.'},
+  {icon:'🔱',name:'Dasara — Saraswati Pooja',telugu:'దసరా — సరస్వతి పూజ',desc:'Arya Vysyas celebrate Dasara with Saraswati Pooja on Maha Navami — all books, tools of trade (accounting ledgers, weighing scales, abacus), and business instruments are placed for worship. The concept: Saraswati blesses knowledge, and knowledge blesses trade. On Vijayadasami, the accounts books are opened again after Pooja — the new business year is formally blessed and begun. Children\'s new textbooks are also placed for Saraswati\'s blessing.'},
+  {icon:'🌊',name:'Karthika Masam — Sea & Lamp Month',telugu:'కార్తీక మాసం',desc:'The entire month of Karthika (November) is sacred for Arya Vysyas. Daily abhishekam to Shiva or Venkateswara. Evening deepams (lamps) lit around the tulasi kota and at the doorstep every night of the month. In Chirala, families walk to the sea on Karthika Pournami for a sacred bath. The sea represents Samudra — the deity of merchant trade and safe sea voyages that historically powered Komati commerce. Chirala families remember their ancestors were traders by sea.'},
+];
+let activeFilter='all', checked=new Set(JSON.parse(localStorage.getItem('arya_vysya_t')||'[]'));
+function save(){localStorage.setItem('arya_vysya_t',JSON.stringify([...checked]));}
+function updateProgress(){
+  const done=checked.size,total=traditions.length;
+  document.getElementById('progressFill').style.width=(done/total*100)+'%';
+  document.getElementById('progressCount').textContent=`${done} / ${total}`;
+  if(done===total)document.getElementById('celebrateBanner').style.display='block';
+}
+function confetti(x,y){
+  const colors=['#b5341a','#e87c1a','#7b2d8b','#1a6b8a','#c9952a'];
+  for(let i=0;i<16;i++){
+    const el=document.createElement('div');el.className='confetti-piece';
+    el.style.cssText=`left:${x+(Math.random()-.5)*110}px;top:${y}px;background:${colors[Math.floor(Math.random()*colors.length)]};border-radius:${Math.random()>.5?'50%':'0'};animation-delay:${Math.random()*.3}s;animation-duration:${1.4+Math.random()}s`;
+    document.body.appendChild(el);setTimeout(()=>el.remove(),2500);
+  }
+}
+function toggleCard(id,e){e.stopPropagation();if(checked.has(id))checked.delete(id);else{checked.add(id);confetti(e.clientX,e.clientY);}save();render();}
+function filter(f,e){activeFilter=f;document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));if(e&&e.target)e.target.classList.add('active');render();}
+function cardHTML(t,done,i){
+  return `<div class="card ${done?'done':''}" onclick="toggleCard(${t.id},event)" style="animation-delay:${i*.06}s">
+    <div class="card-header"><span class="card-icon">${t.icon}</span><div class="check-circle">${done?'✓':''}</div></div>
+    <span class="card-freq">${t.freq}</span>
+    <div class="card-title">${t.title}</div>
+    <div class="card-telugu">${t.telugu}</div>
+    <div class="card-desc">${t.desc}</div>
+    <span class="card-tag">${t.tag}</span>${t.special?'<span class="card-special">🏺 Vasavi Heritage</span>':''}
+  </div>`;
+}
+function render(){
+  const visible=traditions.filter(t=>t.filters.includes(activeFilter));
+  const daily=visible.filter(t=>t.freq==='daily');
+  const weekly=visible.filter(t=>t.freq==='weekly');
+  let html='';
+  if(daily.length){html+=`<div class="section-label"><span class="s-icon">🌅</span> Daily Rituals · రోజువారీ ఆచారాలు</div><div class="grid">`;daily.forEach((t,i)=>{html+=cardHTML(t,checked.has(t.id),i);});html+='</div>';}
+  if(weekly.length){html+=`<div class="section-label"><span class="s-icon">🛕</span> Weekly Traditions · వారంవారీ సంప్రదాయాలు</div><div class="grid">`;weekly.forEach((t,i)=>{html+=cardHTML(t,checked.has(t.id),i);});html+='</div>';}
+  if(activeFilter==='all'||activeFilter==='vasavi'||activeFilter==='pooja'){
+    html+=`<div class="fest-section"><div class="fest-header"><h2>పండుగలు — Sacred Festivals</h2><p>Six Celebrations of the Arya Vysya · Komati Family</p></div><div class="fest-grid">${festivals.map(f=>`<div class="fest-card"><div class="fest-icon">${f.icon}</div><div class="fest-name">${f.name}</div><div class="fest-telugu">${f.telugu}</div><div class="fest-desc">${f.desc}</div></div>`).join('')}</div></div>`;
+  }
+  document.getElementById('container').innerHTML=html;
+  updateProgress();
+}
+render();
+</script>
+</body>
+</html>

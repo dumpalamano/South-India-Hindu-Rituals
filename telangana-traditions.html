@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telangana Family Traditions</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --rose: #c0392b; --gold: #d4a017; --turmeric: #e8871a;
+  --forest: #2e7d32; --night: #1a0a00; --cream: #fdf8f0;
+  --warm: #f5ead5; --card: #fffdf8; --border: #e8d5a0;
+  --ink: #1a0a00; --muted: #7a5a3a;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--cream); font-family:'Nunito',sans-serif; color:var(--ink); }
+body::before {
+  content:''; position:fixed; inset:0;
+  background: radial-gradient(ellipse at 20% 20%, rgba(192,57,43,0.06) 0%, transparent 55%),
+              radial-gradient(ellipse at 80% 80%, rgba(212,160,23,0.06) 0%, transparent 55%);
+  pointer-events:none; z-index:0;
+}
+.top-bar { height:12px; background:linear-gradient(90deg,#c0392b,#e8871a,#d4a017,#c0392b); }
+.container { max-width:980px; margin:0 auto; padding:52px 22px 80px; position:relative; z-index:1; }
+header { text-align:center; margin-bottom:44px; animation:fadeUp .7s ease both; }
+.state-badge { display:inline-block; background:rgba(192,57,43,0.1); color:var(--rose); font-size:11px; font-weight:700; letter-spacing:.3em; text-transform:uppercase; padding:5px 18px; border-radius:100px; margin-bottom:14px; }
+.sub-telugu { font-family:'Playfair Display',serif; font-style:italic; color:var(--gold); font-size:17px; margin-bottom:12px; }
+.icons-row { font-size:24px; letter-spacing:.3em; margin:12px 0; }
+.float { display:inline-block; animation:float 3s ease-in-out infinite; }
+.float:nth-child(2){animation-delay:.4s}.float:nth-child(3){animation-delay:.8s}.float:nth-child(4){animation-delay:1.2s}.float:nth-child(5){animation-delay:.6s}
+h1 { font-family:'Playfair Display',serif; font-size:clamp(2rem,5vw,3.4rem); line-height:1.15; margin-bottom:14px; }
+h1 em { font-style:italic; color:var(--rose); }
+.header-desc { font-size:14px; color:var(--muted); max-width:520px; margin:0 auto; line-height:1.8; }
+.filters { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-bottom:32px; animation:fadeUp .7s .1s ease both; }
+.filter-btn { border:1.5px solid var(--border); background:var(--card); color:var(--muted); padding:8px 18px; border-radius:100px; font-family:'Nunito',sans-serif; font-size:13px; font-weight:700; cursor:pointer; transition:all .2s; }
+.filter-btn:hover { border-color:var(--rose); color:var(--rose); }
+.filter-btn.active { background:var(--rose); border-color:var(--rose); color:#fff; }
+.progress-wrap { background:linear-gradient(135deg,#ffeee0,#fff5e0); border:1px solid var(--border); border-radius:14px; padding:20px 26px; margin-bottom:36px; display:flex; align-items:center; gap:20px; animation:fadeUp .7s .15s ease both; }
+.progress-icon { font-size:28px; }
+.progress-text { flex:1; }
+.progress-label { font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); font-weight:700; margin-bottom:6px; }
+.progress-bar { height:7px; background:rgba(0,0,0,.07); border-radius:99px; overflow:hidden; }
+.progress-fill { height:100%; background:linear-gradient(90deg,var(--rose),var(--turmeric),var(--gold)); border-radius:99px; transition:width .5s ease; }
+.progress-count { font-family:'Playfair Display',serif; font-size:26px; color:var(--rose); font-weight:700; white-space:nowrap; }
+.section-label { font-size:11px; letter-spacing:.3em; text-transform:uppercase; color:var(--turmeric); font-weight:700; margin:42px 0 18px; display:flex; align-items:center; gap:14px; animation:fadeUp .6s ease both; }
+.section-label .s-icon { font-size:18px; }
+.section-label::after { content:''; flex:1; height:1px; background:linear-gradient(90deg,var(--border),transparent); }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(272px,1fr)); gap:18px; }
+.card { background:var(--card); border-radius:14px; border:1.5px solid var(--border); padding:22px 20px 18px; cursor:pointer; transition:all .25s; position:relative; overflow:hidden; animation:fadeUp .5s ease both; }
+.card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg,var(--rose),var(--turmeric)); opacity:0; transition:opacity .2s; }
+.card:hover { transform:translateY(-4px); box-shadow:0 14px 36px rgba(192,57,43,.1); border-color:rgba(192,57,43,.3); }
+.card:hover::before { opacity:1; }
+.card.done { border-color:var(--forest); background:#f4fff5; }
+.card.done::before { opacity:1; background:linear-gradient(90deg,var(--forest),#66bb6a); }
+.card-header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px; }
+.card-icon { font-size:30px; }
+.check-circle { width:24px; height:24px; border-radius:50%; border:2px solid var(--border); display:flex; align-items:center; justify-content:center; flex-shrink:0; color:#fff; font-size:12px; transition:all .2s; }
+.card.done .check-circle { background:var(--forest); border-color:var(--forest); }
+.card-freq { display:inline-block; font-size:10px; letter-spacing:.15em; text-transform:uppercase; font-weight:700; color:var(--rose); margin-bottom:5px; }
+.card-title { font-family:'Playfair Display',serif; font-size:17px; line-height:1.3; color:var(--ink); margin-bottom:5px; }
+.card-telugu { font-size:13px; color:var(--gold); font-weight:600; margin-bottom:8px; }
+.card-desc { font-size:13px; color:var(--muted); line-height:1.65; }
+.card-tag { display:inline-block; margin-top:12px; font-size:11px; padding:3px 10px; border-radius:100px; background:var(--warm); color:var(--muted); font-weight:700; }
+.fest-section { background:linear-gradient(145deg,#1a0500,#2d0a00,#1a0a10); border-radius:18px; padding:34px 28px; margin-top:50px; color:#fff; position:relative; overflow:hidden; animation:fadeUp .6s ease both; }
+.fest-section::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 80% 20%,rgba(212,160,23,.18),transparent 50%),radial-gradient(ellipse at 20% 80%,rgba(192,57,43,.15),transparent 50%); pointer-events:none; }
+.fest-header { text-align:center; margin-bottom:28px; position:relative; }
+.fest-header h2 { font-family:'Playfair Display',serif; font-size:1.9rem; font-style:italic; color:var(--gold); margin-bottom:6px; }
+.fest-header p { font-size:11px; color:rgba(255,255,255,.4); letter-spacing:.25em; text-transform:uppercase; }
+.fest-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:16px; position:relative; }
+.fest-card { background:rgba(255,255,255,.06); border:1px solid rgba(212,160,23,.2); border-radius:12px; padding:18px; transition:background .2s; }
+.fest-card:hover { background:rgba(255,255,255,.1); }
+.fest-icon { font-size:26px; margin-bottom:8px; }
+.fest-name { font-family:'Playfair Display',serif; font-size:16px; color:var(--gold); font-weight:700; margin-bottom:3px; }
+.fest-telugu { font-size:12px; color:rgba(212,160,23,.55); margin-bottom:8px; }
+.fest-desc { font-size:12px; color:rgba(255,255,255,.65); line-height:1.65; }
+.celebrate-banner { display:none; text-align:center; padding:26px; background:linear-gradient(135deg,var(--rose),var(--turmeric)); color:#fff; border-radius:14px; margin-top:32px; font-family:'Playfair Display',serif; font-size:1.2rem; font-style:italic; animation:fadeUp .5s ease; }
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-4px)} }
+@keyframes fadeUp { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
+@keyframes confettiDrop { 0%{transform:translateY(-10px) rotate(0deg);opacity:1} 100%{transform:translateY(100vh) rotate(720deg);opacity:0} }
+.confetti-piece { position:fixed; width:8px; height:8px; border-radius:2px; animation:confettiDrop 2s ease forwards; pointer-events:none; z-index:999; }
+</style>
+</head>
+<body>
+<div class="top-bar"></div>
+<div class="container">
+  <header>
+    <div class="state-badge">🌸 Telangana Hindu Family</div>
+    <p class="sub-telugu">తెలంగాణ కుటుంబ సంప్రదాయాలు</p>
+    <div class="icons-row">
+      <span class="float">🌸</span><span class="float">🪔</span><span class="float">🏺</span><span class="float">🌺</span><span class="float">🥁</span>
+    </div>
+    <h1>మన <em>ఆచారాలు</em><br>Our Family Traditions</h1>
+    <p class="header-desc">The proud traditions of a Telangana Hindu household — from Bonalu's sacred brass pots to Bathukamma's flower towers, from the Panchangam at dawn to Satyanarayana Katha on Pournami nights.</p>
+  </header>
+  <div class="filters">
+    <button class="filter-btn active" onclick="filter('all',event)">అన్నీ · All</button>
+    <button class="filter-btn" onclick="filter('daily',event)">Daily · రోజువారీ</button>
+    <button class="filter-btn" onclick="filter('weekly',event)">Weekly · వారంవారీ</button>
+    <button class="filter-btn" onclick="filter('pooja',event)">Pooja · పూజ</button>
+    <button class="filter-btn" onclick="filter('women',event)">Women's · స్త్రీల</button>
+    <button class="filter-btn" onclick="filter('kitchen',event)">Kitchen · వంట</button>
+    <button class="filter-btn" onclick="filter('elders',event)">Elders · పెద్దలు</button>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress-icon">🏺</div>
+    <div class="progress-text">
+      <div class="progress-label">Traditions Adopted · అవలంబించిన సంప్రదాయాలు</div>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    </div>
+    <span class="progress-count" id="progressCount">0 / 21</span>
+  </div>
+  <div id="container"></div>
+  <div class="celebrate-banner" id="celebrateBanner">🌸 జై తెలంగాణ! 🌸 — Your family's traditions shine like a Bathukamma in full bloom. Bonalu's blessings upon you always!</div>
+</div>
+<script>
+const traditions = [
+  {id:1,freq:'daily',icon:'🪔',filters:['all','daily','pooja'],title:'Morning Pooja & Deepam',telugu:'ఉదయం పూజ, దీపారాధన',tag:'Daily Ritual',desc:'Before sunrise, the lady of the house bathes and lights the deepam in the pooja room. Telugu families place a brass or silver deepam burning gingelly oil. Kumkum and chandanam applied to deities — Lakshmi, Venkateswara, Ganesha. Agarbathi lit, small naivedyam of fruit or sugar placed. The smell of incense at 5am is the smell of Telangana mornings.'},
+  {id:2,freq:'daily',icon:'🌸',filters:['all','daily','women','pooja'],title:'Muggulu — Rangoli at Dawn',telugu:'ముగ్గులు',tag:'Women\'s Tradition',desc:'Every Telangana woman draws muggulu at the front door each morning with white rangoli powder. On festivals, coloured powder and flower petals are added. The patterns — dots connected by flowing lines — are a specific Telangana art form. On Bathukamma days, the muggulu patterns become elaborate and incorporate flower motifs. Daughters learn by watching mothers, hands moving with memorised muscle-memory.'},
+  {id:3,freq:'daily',icon:'🙏',filters:['all','daily','elders'],title:'Namaskaaram to Elders',telugu:'పెద్దలకు నమస్కారం',tag:'Family Bond',desc:'Children touch the feet of grandparents and parents every morning. In Telangana homes, this is accompanied by elders drawing the child\'s face to their chest and whispering a blessing. On return from school or work, the same namaskaaram is repeated. Elders bless with "Ayushman bhava" and often press a small coin or sweet into the child\'s palm.'},
+  {id:4,freq:'daily',icon:'🍚',filters:['all','daily','kitchen','pooja'],title:'Naivedyam — First to God',telugu:'నైవేద్యం',tag:'Kitchen Ritual',desc:'The first portion of every cooked meal is placed before the deity. In Telangana households this is done with a small portion of rice, dal, and the day\'s main dish on a banana leaf or small plate. Grandmothers insist the naivedyam must be done before anyone eats, even if hungry. After about 5 minutes, the food is returned and mixed with everyone\'s meal as prasadam.'},
+  {id:5,freq:'daily',icon:'📿',filters:['all','daily','pooja','elders'],title:'Evening Aarti & Stotras',telugu:'సాయంకాల ఆరతి',tag:'Evening Ritual',desc:'At dusk, the family gathers for aarti. Telugu stotras — Venkateswara Suprabhatam, Lakshmi Ashtothram, or Hanuman Chalisa — are recited. In Telangana, the Saraswathi stotra is recited on Wednesdays. The aarti plate (camphor+lamp) is circled clockwise, the bell rung. Everyone cups their hands over the flame and touches their eyes — absorbing the divine light.'},
+  {id:6,freq:'daily',icon:'🌿',filters:['all','daily','pooja'],title:'Tulasi Pooja & Watering',telugu:'తులసి పూజ',tag:'Daily Devotion',desc:'Every Telangana home has a tulasi kota (a raised platform for the holy basil plant) in the courtyard or balcony. Women water it at sunrise and offer a small flower or agarbathi. On Karthika Masam evenings, the tulasi kota is surrounded by small earthen lamps — one of the most beautiful sights of a Telangana household in November.'},
+  {id:7,freq:'daily',icon:'⭐',filters:['all','daily','elders'],title:'Panchangam Reading at Dawn',telugu:'పంచాంగం చూడడం',tag:'Elder\'s Wisdom',desc:'Grandfather consults the Telugu Panchangam every morning. He checks the tithi, nakshatra, yoga, karana, and Rahu Kalam before the family plans travel, business, doctor visits, or any significant action. Children gather around to hear — learning both the astronomical system and the stories behind each nakshatra. This is the Telangana equivalent of checking the morning news.'},
+  {id:8,freq:'weekly',icon:'🔱',filters:['all','weekly','pooja'],title:'Monday Shiva Pooja',telugu:'సోమవారం శివ పూజ',tag:'Weekly Vrat',desc:'Monday belongs to Lord Shiva. Elders fast or eat fruit. Bilva leaves collected by children from the garden are offered to the Shiva lingam at home or at the local temple. Milk abhishekam is performed. Telangana\'s Bhakta Ramadasu tradition (Bhadrachalam) means many families also sing his compositions on Mondays. The lingam is smeared with vibhuti (sacred ash) and sandal paste.'},
+  {id:9,freq:'weekly',icon:'🌟',filters:['all','weekly','women','pooja'],title:'Friday Varalakshmi Vrat',telugu:'వరలక్ష్మి వ్రతం',tag:'Women\'s Vrat',desc:'Friday is Goddess Lakshmi\'s day. Married women observe Varalakshmi Vrat — particularly on the Friday before Shravana Pournami. A kalasha decorated with mango leaves and coconut is installed. Lakshmi\'s face is drawn on turmeric or a silver coin. Sixteen items of solah shringar are offered. A neighbour woman is invited and gifted tamboolam (betel leaves, coconut, fruits, bangles) — the Goddess arriving in human form.'},
+  {id:10,freq:'weekly',icon:'🌕',filters:['all','weekly','pooja'],title:'Pournami Satyanarayana Katha',telugu:'పౌర్ణమి సత్యనారాయణ కథ',tag:'Full Moon Ritual',desc:'On Pournami (full moon) evening, many Telangana families perform Satyanarayana Swami Katha. A decorated mandapam is set up with banana stems, mango leaves, and flowers. The priest or elder recites the five chapters of the Katha. All family members and invited neighbours sit to hear it. Prasadam — mannapaayasam (semolina pudding) — is distributed. This is the great Telangana monthly family gathering.'},
+  {id:11,freq:'weekly',icon:'🥁',filters:['all','weekly','women'],title:'Bathukamma Song Practice',telugu:'బతుకమ్మ పాటలు',tag:'Seasonal Women\'s Tradition',desc:'In the weeks leading up to Bathukamma festival (Sept-Oct), women and girls practice the traditional Bathukamma songs in the evening. They learn the call-and-response patterns, the clapping rhythm, and the circular step that forms the dance. Grandmothers teach the oldest songs — some in archaic Telugu that younger generations wouldn\'t otherwise know. A living oral tradition.'},
+  {id:12,freq:'weekly',icon:'🌺',filters:['all','weekly','kitchen'],title:'Sunday Vantillu — Family Feast',telugu:'ఆదివారం వంటిల్లు',tag:'Kitchen Tradition',desc:'Sunday is for elaborate cooking. Telangana cuisine is distinct — rich with tamarind, dried red chillies, peanuts, sesame. Grandmothers make Sakinalu, Chegodi, and Ariselu for snacking. The Sunday meal might include Pesarattu, Gongura mutton (non-veg families), or Guddu Pulusu. Children assigned tasks: grinding chutney on the traditional rolu-rokali (mortar-pestle), sorting tamarind, making flour balls.'},
+  {id:13,freq:'weekly',icon:'🎭',filters:['all','weekly','elders'],title:'Burrakatha & Folk Story Hour',telugu:'బుర్రకథ కథలు',tag:'Cultural Heritage',desc:'Telangana\'s unique storytelling tradition — Burrakatha — uses a buDDike instrument while narrating mythological or social stories in rhythmic verse. Grandfathers keep this alive by narrating Pothana\'s Bhagavatam stories, tales of Sarangapani, or local folklore about Nizam-era Telangana. These evening story sessions are the family\'s living cultural library.'},
+  {id:14,freq:'weekly',icon:'🛕',filters:['all','weekly','pooja'],title:'Kula Devata Temple Visit',telugu:'కుల దేవత దర్శనం',tag:'Ancestral Bond',desc:'Each Telangana family has a kula devata — often a village goddess like Pochamma, Yellamma, Nookalamma, or Pedamma. Weekly visits (or at minimum monthly) to this temple maintain the family\'s ancestral spiritual bond. The women carry a small brass pot (bhavani) with turmeric water and neem leaves. Children learn which Goddess protects which function — Pochamma for disease, Yellamma for community welfare.'},
+  {id:15,freq:'daily',icon:'💛',filters:['all','daily','women','kitchen'],title:'Turmeric in Everything',telugu:'పసుపు నిత్య వినియోగం',tag:'Kitchen & Ritual',desc:'Telangana kitchens use turmeric not just as a spice but as medicine, ritual ingredient, and cosmetic. A pinch in rice, dal, bathukamma water, and the morning milk. Before any auspicious act, a small turmeric mark is applied to the forehead. Women make turmeric paste for healing and skincare. The Gouri idol at festivals is made of fresh turmeric — Goddess in golden form.'},
+  {id:16,freq:'weekly',icon:'🎵',filters:['all','weekly','elders','pooja'],title:'Pothana Bhagavatam Recitation',telugu:'పోతన భాగవతం',tag:'Telugu Literary Heritage',desc:'Bammera Pothana\'s Telugu Mahabhaagavatam is the soul of Telangana\'s spiritual-literary identity. Elder men recite a passage each morning or evening — grandchildren learn couplets by heart. Pothana famously dedicated his Bhagavatam to Lord Rama alone (refusing a king\'s patronage). Telangana families hold this as a point of cultural pride distinct from coastal Andhra traditions.'},
+  {id:17,freq:'weekly',icon:'🌱',filters:['all','weekly','pooja','women'],title:'Neem & Bangles — Bonalu Prep',telugu:'బోనాల సిద్ధం',tag:'Festival Tradition',desc:'In Ashada Masam (July-August), women begin preparation for Bonalu. Fresh neem branches are gathered. New bangles, kumkum, and sarees are purchased. The brass bonam pot is polished. Women practise balancing the pot on their heads with a lit lamp atop it. The family identifies which local Mahakali temple they will visit on which Sunday. This preparation itself is ritualistic and joyful.'},
+  {id:18,freq:'weekly',icon:'📖',filters:['all','weekly','elders'],title:'Telugu Book & Newspaper Reading',telugu:'తెలుగు పుస్తక పఠనం',tag:'Language Pride',desc:'Telangana families maintain a strong Telugu reading tradition. Grandfathers read the Telugu daily newspaper aloud, discussing current events with the family. Children are given Chandamama or Balamitra children\'s magazines. The family owns Pothana\'s Bhagavatam, Vemana Padyaalu, and local poets\' works. Reading and reciting Telugu literature is an act of cultural identity maintenance.'},
+  {id:19,freq:'daily',icon:'🌙',filters:['all','daily','pooja'],title:'Sandhya Vandanam / Evening Prayer',telugu:'సంధ్యావందనం',tag:'Twilight Ritual',desc:'At dusk, the family gathers for evening prayer. Men in Brahmin households perform Sandhya Vandanam. In all Telangana households, the evening deepam is lit, aarti performed, and a brief sloka recited. This bridges the active day with the reflective night. Children are required to be present — sitting quietly during the prayer is itself a form of learning and spiritual absorption.'},
+  {id:20,freq:'weekly',icon:'🌾',filters:['all','weekly','kitchen','pooja'],title:'Sankranti Sakinalu Making',telugu:'సంక్రాంతి సకినాలు',tag:'Seasonal Kitchen Ritual',desc:'In the weeks before Sankranti (January), grandmothers begin making Sakinalu — crispy fried spirals of rice flour — and Ariselu (rice flour + jaggery sweets). Making these is a family event: children help shape, elders supervise. Made in bulk, shared with neighbours. The smell of frying Sakinalu and Ariselu announces Sankranti is approaching. A batch is always offered to the deity first.'},
+  {id:21,freq:'weekly',icon:'🔥',filters:['all','weekly','women'],title:'Bhogi Mantalu — Bonfire Morning',telugu:'భోగి మంటలు',tag:'Sankranti Tradition',desc:'On Bhogi (the day before Sankranti), before dawn, the family burns old items — worn clothes, broken furniture, dry branches — in a communal bonfire in the street or courtyard. Children throw sesame seeds and sugarcane pieces into the fire. The bonfire represents burning away the old to welcome the new. Neighbours gather around it. Elders pour ghee into the flames for the aroma and the blessing.'},
+];
+const festivals = [
+  {icon:'🌸',name:'Bathukamma',telugu:'బతుకమ్మ',desc:'The crown jewel of Telangana — nine days of flower-stack worship of Goddess Gauri. Women arrange tangedu, gunugu, and seasonal flowers in conical layers on a brass plate (tambalam). Each evening they carry Bathukamma to a central spot, form circles, sing folk songs, and dance rhythmically while clapping. The 9th day, Saddula Bathukamma, is the grand finale — all Bathukammas immersed in water as women sing farewell songs. In 2025 it earned two Guinness World Records.'},
+  {icon:'🏺',name:'Bonalu',telugu:'బోనాలు',desc:'Telangana\'s most visceral festival — thanksgiving to Goddess Mahakali. Women cook rice with milk and jaggery in a brass pot (bonam), decorate it with turmeric and neem leaves, balance it on their heads with a lit lamp on top, and carry it to the Mahakali temple in colourful processions. The bare-bodied Pothuraju (Goddess\'s brother) leads the procession with a whip. Celebrated every Sunday of Ashada month. The whole street becomes a sacred processional route.'},
+  {icon:'🌾',name:'Sankranti & Bhogi',telugu:'సంక్రాంతి, భోగి',desc:'Three-day harvest festival: Bhogi (bonfire day), Sankranti (main celebration with Haridasu singers going door-to-door, Gobbemma cow worship, bullock cart races), and Kanuma (cattle worship and family gatherings). Telangana adds special rituals: children are showered with reetha fruits, coins, and flowers in the Bhogi Pallu ceremony. Gongura, sugarcane, jaggery, and fresh sesame sweets mark the feast.'},
+  {icon:'🎊',name:'Ugadi',telugu:'ఉగాది',desc:'Telugu New Year — begins before dawn with Abhyanga Snanam (oil bath). Houses decorated with mango leaf torans. Ugadi Pachadi — the six-taste chutney mixing neem (bitterness), jaggery (sweetness), raw mango (sourness), tamarind (tartness), chilli (heat), salt — eaten as a meditation on life\'s completeness. The Panchanga Sravanam (New Year almanac recitation) at the temple is attended by the whole family. New clothes, sweets, gifts.'},
+  {icon:'🔱',name:'Maha Shivaratri',telugu:'మహా శివరాత్రి',desc:'The great night of Shiva — Telangana observes this with special intensity near Yadadri and Kaleshwaram temples. Families stay awake all night (jaagaran), reciting Shiva Panchakshara. A full day fast, then breaking it with specific Shiva prasadam items. Children learn Shiva\'s 108 names (Ashtottaram). The night vigil is a family event — elders narrate the story of why Shivaratri must be observed through the night.'},
+  {icon:'🌺',name:'Sammakka Saralamma Jatara',telugu:'సమ్మక్క సారలమ్మ జాతర',desc:'The world\'s largest tribal festival, held every two years at Medaram, Jayashankar Bhupalpally district. Families make a pilgrimage (some walking days) to honour the tribal mother-daughter goddesses Sammakka and Saralamma who sacrificed their lives resisting oppressive tax collection by the Kakatiya kings. Devotees offer bellam (jaggery) equal to their body weight. Over 1 crore devotees attend. Telangana families speak of this pilgrimage with reverence across generations.'},
+];
+let activeFilter='all', checked=new Set(JSON.parse(localStorage.getItem('telangana_t')||'[]'));
+function save(){localStorage.setItem('telangana_t',JSON.stringify([...checked]));}
+function updateProgress(){
+  const done=checked.size,total=traditions.length;
+  document.getElementById('progressFill').style.width=(done/total*100)+'%';
+  document.getElementById('progressCount').textContent=`${done} / ${total}`;
+  if(done===total)document.getElementById('celebrateBanner').style.display='block';
+}
+function confetti(x,y){
+  const colors=['#c0392b','#e8871a','#d4a017','#2e7d32','#9b59b6'];
+  for(let i=0;i<16;i++){
+    const el=document.createElement('div');el.className='confetti-piece';
+    el.style.cssText=`left:${x+(Math.random()-.5)*110}px;top:${y}px;background:${colors[Math.floor(Math.random()*colors.length)]};border-radius:${Math.random()>.5?'50%':'0'};animation-delay:${Math.random()*.3}s;animation-duration:${1.4+Math.random()}s`;
+    document.body.appendChild(el);setTimeout(()=>el.remove(),2500);
+  }
+}
+function toggleCard(id,e){e.stopPropagation();if(checked.has(id))checked.delete(id);else{checked.add(id);confetti(e.clientX,e.clientY);}save();render();}
+function filter(f,e){activeFilter=f;document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));if(e&&e.target)e.target.classList.add('active');render();}
+function cardHTML(t,done,i){
+  return `<div class="card ${done?'done':''}" onclick="toggleCard(${t.id},event)" style="animation-delay:${i*.06}s">
+    <div class="card-header"><span class="card-icon">${t.icon}</span><div class="check-circle">${done?'✓':''}</div></div>
+    <span class="card-freq">${t.freq}</span>
+    <div class="card-title">${t.title}</div>
+    <div class="card-telugu">${t.telugu}</div>
+    <div class="card-desc">${t.desc}</div>
+    <span class="card-tag">${t.tag}</span>
+  </div>`;
+}
+function render(){
+  const visible=traditions.filter(t=>t.filters.includes(activeFilter));
+  const daily=visible.filter(t=>t.freq==='daily');
+  const weekly=visible.filter(t=>t.freq==='weekly');
+  let html='';
+  if(daily.length){html+=`<div class="section-label"><span class="s-icon">🌅</span> Daily Rituals · రోజువారీ ఆచారాలు</div><div class="grid">`;daily.forEach((t,i)=>{html+=cardHTML(t,checked.has(t.id),i);});html+='</div>';}
+  if(weekly.length){html+=`<div class="section-label"><span class="s-icon">🛕</span> Weekly Traditions · వారంవారీ సంప్రదాయాలు</div><div class="grid">`;weekly.forEach((t,i)=>{html+=cardHTML(t,checked.has(t.id),i);});html+='</div>';}
+  if(activeFilter==='all'||activeFilter==='pooja'){
+    html+=`<div class="fest-section"><div class="fest-header"><h2>పండుగలు — Grand Festivals</h2><p>Six Celebrations of Telangana Households</p></div><div class="fest-grid">${festivals.map(f=>`<div class="fest-card"><div class="fest-icon">${f.icon}</div><div class="fest-name">${f.name}</div><div class="fest-telugu">${f.telugu}</div><div class="fest-desc">${f.desc}</div></div>`).join('')}</div></div>`;
+  }
+  document.getElementById('container').innerHTML=html;
+  updateProgress();
+}
+render();
+</script>
+</body>
+</html>
